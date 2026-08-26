@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keep Warm</title>
+<meta name="description" content="A Claude Code skill that keeps your sales pipeline warm: fresh research per contact, contextual no-ask share notes in your voice, draft-only by design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,560&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#171310;--surface:#211b15;--surface2:#2a2118;--ink:#ece5d8;--muted:#a5988a;
+  --line:#372c20;--ember:#e0913e;--ember-deep:#c05c33;--chip:#2e2419;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f4f0e7;--surface:#fbf8f2;--surface2:#ece6d9;--ink:#251e15;--muted:#6e6355;
+    --line:#ddd4c4;--ember:#a85e14;--ember-deep:#9a4520;--chip:#ece5d6;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#f4f0e7;--surface:#fbf8f2;--surface2:#ece6d9;--ink:#251e15;--muted:#6e6355;
+  --line:#ddd4c4;--ember:#a85e14;--ember-deep:#9a4520;--chip:#ece5d6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.65 "IBM Plex Sans",-apple-system,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px}
+a{color:var(--ember)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ember)}
+header{padding:88px 0 26px}
+h1{font-family:Fraunces,Georgia,serif;font-weight:560;font-size:clamp(46px,9vw,76px);line-height:1.02;margin:14px 0 0;letter-spacing:-.015em;text-wrap:balance}
+.thesis{font-family:Fraunces,Georgia,serif;font-weight:340;font-size:clamp(21px,3.4vw,27px);line-height:1.35;margin:26px 0 0;color:var(--muted);text-wrap:balance}
+.thesis b{color:var(--ink);font-weight:560}
+.heat{height:3px;border:none;border-radius:2px;margin:44px 0 0;background:linear-gradient(90deg,var(--ember-deep),var(--ember) 45%,var(--line) 100%)}
+section{padding:44px 0 4px}
+h2{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+p{margin:0 0 16px;max-width:62ch}
+.pipeline{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:"IBM Plex Mono",monospace;font-size:13px;margin:8px 0 10px}
+.stage{background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:9px 13px;white-space:nowrap}
+.stage small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+.arrow{color:var(--ember);font-weight:500}
+.cards{display:grid;grid-template-columns:1fr;gap:14px;margin-top:6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 24px}
+.card .n{font-family:"IBM Plex Mono",monospace;color:var(--ember);font-size:12px;letter-spacing:.1em}
+.card h3{font-family:Fraunces,Georgia,serif;font-weight:560;font-size:21px;margin:8px 0 8px}
+.card p{font-size:15px;color:var(--muted);margin:0}
+.card p b{color:var(--ink);font-weight:600}
+ul.rules{list-style:none;padding:0;margin:4px 0 0;max-width:62ch}
+ul.rules li{padding:11px 0 11px 26px;border-bottom:1px solid var(--line);position:relative;font-size:15.5px}
+ul.rules li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--ember)}
+ul.rules li b{font-weight:600}
+.built{background:var(--surface2);border-radius:10px;padding:22px 24px;font-size:15px}
+.built p{margin:0 0 10px}
+.built p:last-child{margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 0}
+.btn{display:inline-block;font-weight:600;font-size:15px;text-decoration:none;border-radius:8px;padding:13px 22px}
+.btn.primary{background:var(--ember);color:var(--bg)}
+.btn.ghost{border:1px solid var(--line);color:var(--ink)}
+footer{margin-top:70px;padding:26px 0 60px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+footer a{color:var(--muted)}
+@media (min-width:640px){.cards{grid-template-columns:1fr 1fr 1fr}.card{padding:20px}}
+@media (prefers-reduced-motion:no-preference){
+  header .eyebrow,header h1,header .thesis{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+  header h1{animation-delay:.06s}header .thesis{animation-delay:.14s}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+<div class="eyebrow">A Claude Code skill &middot; MIT &middot; open source</div>
+<h1>Keep Warm</h1>
+<p class="thesis">Pipelines rarely die of rejection. They die of silence. This skill ends the silence <b>once a week, with something worth reading, and no ask attached.</b></p>
+<hr class="heat">
+</header>
+
+<section>
+<h2>What it does</h2>
+<p>Every week, Keep Warm looks at who's in your funnel, researches what actually happened in each contact's world in the last 30 days, and drafts a short personal note in your voice: here's a thing, here's what it is, here's why it's interesting <em>to you</em>. You read the pack, send the ones you like, and the engine tracks the cadence from there.</p>
+<p><b>It never sends anything.</b> Draft-only is the core invariant, enforced in the spec: a run that ends with anything sent is a failed run.</p>
+<div class="pipeline">
+<span class="stage">roster<small>CRM + manual</small></span><span class="arrow">→</span>
+<span class="stage">reconcile<small>what really went out</small></span><span class="arrow">→</span>
+<span class="stage">research<small>last 30 days, per topic</small></span><span class="arrow">→</span>
+<span class="stage">script<small>no-ask, your voice</small></span><span class="arrow">→</span>
+<span class="stage">review pack<small>you send</small></span>
+</div>
+</section>
+
+<section>
+<h2>Three ingredients</h2>
+<div class="cards">
+<div class="card">
+<div class="n">01 / METHOD</div>
+<h3>Sam McKenna</h3>
+<p>The nurture play from <b><a href="https://samsalesconsulting.com">#samsales</a></b>: when a buyer goes quiet, educate them, give them ammo they can forward internally, use multiple channels, and make <b>no ask whatsoever</b>. The cadence ladder in this skill is her play, adapted to a weekly rhythm.</p>
+</div>
+<div class="card">
+<div class="n">02 / ARCHITECTURE</div>
+<h3>Roman Olivera</h3>
+<p>The contextual-sharing pipeline from <b><a href="https://orbanlabs.com">Orban Labs</a></b>: every link arrives already explained. One pipeline, a checkable artifact per stage, evidence kept separate from the message, and render-from-approval: nothing goes out unapproved.</p>
+</div>
+<div class="card">
+<div class="n">03 / RESEARCH</div>
+<h3>last30days</h3>
+<p><b><a href="https://github.com/mvanhorn/last30days-skill">mvanhorn's research engine</a></b> (MIT) pulls what people actually said in the last 30 days across Reddit, X, YouTube, HN and the web, so what you share is fresh and real, not evergreen filler.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>The rules that make it safe</h2>
+<ul class="rules">
+<li><b>No ask, ever.</b> The test for every draft: could they read it and owe you nothing?</li>
+<li><b>Draft-only.</b> The skill has no send path. Cadence advances only when you confirm a send.</li>
+<li><b>Truth gates.</b> Proof numbers must come from a verified proof-points file. No number, no proof touch. Nothing invented about a contact.</li>
+<li><b>Guardrails.</b> Skips anyone touched in the last 5 days, stops after 3 unanswered touches and hands the call to you, never re-shares a link.</li>
+<li><b>Two tracks.</b> Live conversations get a weekly touch; pure keep-warm contacts go roughly monthly.</li>
+</ul>
+</section>
+
+<section>
+<h2>How it was built</h2>
+<div class="built">
+<p>Built in one overnight <a href="https://claude.com/claude-code">Claude Code</a> session: the spec was written, then put through a four-round adversarial review with two independent frontier models attacking it and fixes applied between rounds. Round one found three blockers and sixteen majors. Round four was clean from both reviewers. Then it ran for real on a live pipeline before anyone called it done.</p>
+<p>The whole loop, ledger included, ships in the repo's story so you can judge the method, not just the result.</p>
+</div>
+<div class="cta">
+<a class="btn primary" href="https://github.com/Works-HQ/keep-warm-skill">Get the skill on GitHub</a>
+<a class="btn ghost" href="https://workshq.com.au">Built by Works</a>
+</div>
+</section>
+
+<footer>
+Credits: nurture methodology by <a href="https://samsalesconsulting.com">Sam McKenna / #samsales</a> &middot; contextual-sharing architecture by <a href="https://orbanlabs.com">Roman Olivera, Orban Labs</a> &middot; research engine <a href="https://github.com/mvanhorn/last30days-skill">last30days-skill</a> by mvanhorn (MIT) &middot; assembled by <a href="https://workshq.com.au">Zac King, Works</a>. MIT licensed.
+</footer>
+
+</div>
+</body>
+</html>
