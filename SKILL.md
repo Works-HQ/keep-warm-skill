@@ -137,7 +137,7 @@ Write `roster-snapshot.json` and `cadence-decisions.md`.
 4. **The user's own material:** check your published-content folder `[ADAPT]` for anything shipped in the last 14 days that fits a contact's topics. Sam's rule: your own posts, articles and podcast clips are first-class nurture assets.
 5. Write `evidence.md`: every candidate item with URL, source, date, one-line summary, and which contact(s) it could serve. Evidence is internal; source records never get pasted wholesale into a message.
 
-**Selection bar:** an item earns a slot only if it is (a) recent — verify the date; undated vendor posts must be flagged as undated, never presented as "this week"; (b) specific to the contact's actual problem or industry; (c) something the user would genuinely find interesting themselves. One strong item beats three okay ones.
+**Selection bar:** an item earns a slot only if it is (a) recent — verify the date; undated vendor posts must be flagged as undated, never presented as "this week"; (b) specific to the contact's actual problem or industry; (c) something the user would genuinely find interesting themselves; (d) **something you can stand behind if the contact asks "so what do we do about it?"** — share constructive fixes and playbooks, not threat-framing content that poses a problem you can't solve for them. One strong item beats three okay ones.
 
 **Link dedupe (checked at FOUR points):** at evidence selection, at drafting, at pack assembly, and at mail-draft creation — each time against fresh `state.json` `links_shared` for that contact AND the current run's allocations. Normalize URLs before comparing (strip tracking params, trailing slashes). Never re-share a link to the same contact; avoid the same link to two contacts at the same company.
 
