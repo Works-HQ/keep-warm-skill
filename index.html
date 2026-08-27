@@ -50,10 +50,7 @@ ul.rules{list-style:none;padding:0;margin:4px 0 0;max-width:62ch}
 ul.rules li{padding:11px 0 11px 26px;border-bottom:1px solid var(--line);position:relative;font-size:15.5px}
 ul.rules li::before{content:"";position:absolute;left:2px;top:19px;width:9px;height:9px;border-radius:50%;background:var(--ember)}
 ul.rules li b{font-weight:600}
-.built{background:var(--surface2);border-radius:10px;padding:22px 24px;font-size:15px}
-.built p{margin:0 0 10px}
-.built p:last-child{margin:0}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:10px 0 0}
 .btn{display:inline-block;font-weight:600;font-size:15px;text-decoration:none;border-radius:8px;padding:13px 22px}
 .btn.primary{background:var(--ember);color:var(--bg)}
 .btn.ghost{border:1px solid var(--line);color:var(--ink)}
@@ -123,11 +120,6 @@ footer a{color:var(--muted)}
 </section>
 
 <section>
-<h2>How it was built</h2>
-<div class="built">
-<p>Built in one overnight <a href="https://claude.com/claude-code">Claude Code</a> session: the spec was written, then put through a four-round adversarial review with two independent frontier models attacking it and fixes applied between rounds. Round one found three blockers and sixteen majors. Round four was clean from both reviewers. Then it ran for real on a live pipeline before anyone called it done.</p>
-<p>The whole loop, ledger included, ships in the repo's story so you can judge the method, not just the result.</p>
-</div>
 <div class="cta">
 <a class="btn primary" href="https://github.com/Works-HQ/keep-warm-skill">Get the skill on GitHub</a>
 <a class="btn ghost" href="https://workshq.com.au">Built by Works</a>

@@ -14,7 +14,7 @@ This skill is a fusion of three things, and the credits matter:
 2. **Roman Olivera's contextual-sharing pipeline** ([Orban Labs](https://orbanlabs.com)). Roman built a tool that shares links with his contacts where every link arrives already explained: what it is, why it's interesting. His architecture principles shaped this skill: one core pipeline (roster → research → script → deliver), every stage has its own artifact so it can be checked and retried alone, evidence stays separate from the message, and **render-from-approval**: nothing goes out that a human hasn't approved.
 3. **The last30days research engine** ([mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill), MIT). The research layer. For each contact's topics it pulls what people actually said in the last 30 days across Reddit, X, YouTube, Hacker News and the web, so the material you share is fresh and real, not evergreen filler.
 
-Built with [Claude Code](https://claude.com/claude-code) in one overnight session, then put through a 4-round adversarial review (two independent frontier models attacking the spec, fix between rounds) before first use.
+Built with [Claude Code](https://claude.com/claude-code) and put through a 4-round adversarial review (two independent frontier models attacking the spec, fixes between rounds) before first use.
 
 ## How it works
 
