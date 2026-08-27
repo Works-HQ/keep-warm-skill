@@ -51,8 +51,8 @@ roster ──► reconcile ──► cadence ──► research ──► script
 
 ## Credits
 
-- Nurture methodology: **Sam McKenna** and the [#samsales](https://samsalesconsulting.com) team
-- Contextual-sharing architecture: **Roman Olivera**, [Orban Labs](https://orbanlabs.com)
+- Nurture methodology: **[Sam McKenna](https://www.linkedin.com/in/samsalesli)** and the [#samsales](https://samsalesconsulting.com) team
+- Contextual-sharing architecture: **[Roman Olivera](https://www.linkedin.com/in/romanolivera)**, [Orban Labs](https://orbanlabs.com)
 - Research engine: **[last30days-skill](https://github.com/mvanhorn/last30days-skill)** by mvanhorn (MIT)
 - Assembled by **Zac King**, [Works](https://workshq.com.au)
 
